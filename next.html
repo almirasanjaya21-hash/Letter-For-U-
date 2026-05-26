@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+<style>
+
+body{
+    background-image:url("Graduation\ \(4\).png");
+    margin:0;
+    background-size: cover;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    height:100vh;
+}
+
+
+
+#typing{
+
+    margin-top:80px;
+    max-width: 1015px;
+
+    padding: 20px;
+
+    margin-left: 40px;
+    text-align: center;
+    display:flex;
+
+
+    line-height: 1.2;;
+
+    font-size:29px;
+    color:rgb(64, 71, 95);
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgb(119, 109, 109);
+
+    font-family:sans-serif;
+
+    white-space:pre-wrap;
+}
+
+/* tombol awalnya hilang */
+#btn{
+
+    display:none;
+
+    margin-top:40px;
+
+    background-color: palevioletred;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    padding:15px 30px;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="typing"></div>
+
+<button id="btn"
+onclick="window.location.href='index (4).html'">
+
+Click To Continue!!
+
+</button>
+
+<script>
+
+const text = `Haii Shelaa, ANEH BNGT NGETIK KEK GINI PLS.. but first of all let me say sorry for all of my mistake to you. Inget banget ko termasuk di list temen pertama aku di SMP and it turns out kita sama-sama potterhead!! and we ended up become friends, partner in every event, DUO MC, DUO BAHASA, grow up together and become stronger together!! makasi udah mau denger segala ocehan aku malam-malam, vn ga jelas itu INGET BNGT PAS KLS 8 KITA LESEHAN BERDUA KAYA ORG GILA DI DEPAN PAGAR CORDOVA CUMA KRN MAU LIET PANGERAN SM RASEND😭😭, MALU SHEL MALU. But it such a funny memories tho, One thing that i really impressed with you adalah ko tuh have an Alpha Girls vibes bngt gitu loh, + SUARA NYA KEK TOA ANJIR MIC ALMAD PUN KALAH, KLO UDH LIET YOUNGJAE, MINJAE PAS NNTN MV, SUARA TV PUN KALAH. TERUS SHELA NIH ORG NY ASIK BNGT APALAGI KLO DI AJAK GIBAH, BEH APPROVED. ADA AJA CERITA NYA HERAN, VIBES NYA CERIAA BNGT😍😍 orang kalau ngeliat dia tuh pasti ikutan happy juga krn dia emg bawaan nya happy gitu. Dan kalau di tanya siapa org yg paling Love Theirselves, aku bakal jawab ko sih. Because of you love yourself, it makes everybody wanna be close to you too, so always be yourself sel.`;
+
+let index = 0;
+
+function typing(){
+
+    if(index < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typing, 50);
+
+    }else{
+
+        // tombol muncul
+        document.getElementById("btn").style.display = "block";
+
+    }
+
+}
+
+typing();
+
+</script>
+
+</body>
+</html>
